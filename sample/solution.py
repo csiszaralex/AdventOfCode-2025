@@ -15,47 +15,12 @@ def get_input_files() -> list[str]:
     return txt_files
 
 
-def part1(lines: list[str]) -> int:
-    sum = 0
-    for l in lines:
-        nums: list[int] = []
-        for c in l:
-            nums.append(int(c))
-        max_1 = max(nums[:-1])
-        max_1_loc = nums.index(max_1)
-        max_2 = max(nums[max_1_loc + 1 :])
-        sum += int(f"{max_1}{max_2}")
-        # print(nums, max_1, max_1_loc, max_2, sum)
-    return sum
+def part1(data: list[str]) -> None:
+    return None
 
 
-def part2(lines: list[str]) -> int:
-    sum = 0
-    n = 12
-    for l in lines:
-        print(l)
-        nums: list[int] = []
-        for c in l:
-            nums.append(int(c))
-        excludes: list[int] = []
-        for i in range(n):
-            minus = (n - i - 1) * -1
-            max_n = get_max_expect(nums[: minus if minus != 0 else None])
-            max_n_loc = nums.index(max_n)
-            nums = nums[max_n_loc+1:]
-            excludes.append(max_n)
-        x = "".join(str(n) for n in excludes)
-        print(nums, excludes, x)
-        sum += int(x)
-
-    return sum
-
-
-# 172678668011611 to high
-def get_max_expect(nums: list[int]) -> int:
-    nums = nums.copy()
-
-    return max(nums) if nums else -1
+def part2(data: list[str]) -> None:
+    return None
 
 
 if __name__ == "__main__":
