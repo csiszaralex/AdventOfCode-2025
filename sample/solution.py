@@ -15,12 +15,12 @@ def get_input_files() -> list[str]:
     return txt_files
 
 
-def part1(data: list[str]) -> None:
-    return None
+def part1(data: list[str]) -> int:
+    return 0
 
 
-def part2(data: list[str]) -> None:
-    return None
+def part2(data: list[str]) -> int:
+    return 0
 
 
 if __name__ == "__main__":
